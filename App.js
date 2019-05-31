@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from "react-native";
 import { openPlace } from "./src/store/actions/index";
 import { connect } from "react-redux";
 import NativeTabs from "native-tabs";
+import ExampleProvider from "./src/components/ExampleProvider";
 
 class App extends Component {
     state = {
@@ -59,7 +60,7 @@ class App extends Component {
     render() {
         return (
             <>
-                <NativeTabs
+                {/* <NativeTabs
                     tabs={this.state.items}
                     disable={true}
                     styles={{
@@ -72,7 +73,8 @@ class App extends Component {
                     activeTab={this.state.activeTab}
                     onTab={this.callBackFunction}
                 />
-				{this.handleViews()}
+				{this.handleViews()} */}
+                <ExampleProvider/>
             </>
         );
     }
